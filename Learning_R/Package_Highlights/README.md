@@ -1,9 +1,4 @@
-# Getting Started in R
+# Package Highlights
 
-## What is R?
-
-## Why should I use R?
-
-## Installing R and RStudio
-
-## Navigating the RStudio Interface
+## The Tidyverse
+### Intro to the Tidyverse: packages *readr, dplyr, tidyr, stringr, purrr, forcats*
