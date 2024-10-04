@@ -1,9 +1,8 @@
-# Getting Started in R
+# Data Cleaning in R
 
-## What is R?
+## Tidy Data
 
-## Why should I use R?
+## Importing Data
 
-## Installing R and RStudio
+## tidyr and dplyr
 
-## Navigating the RStudio Interface
