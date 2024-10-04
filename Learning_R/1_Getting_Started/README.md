@@ -17,3 +17,5 @@ R is the coding program/language while R Studio is the interface. You need to in
 ## Navigating the RStudio Interface
 
 ## Scripts, Markdown, Shiny
+
+## Other great resources to start with
