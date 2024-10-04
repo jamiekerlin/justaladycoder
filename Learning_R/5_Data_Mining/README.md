@@ -1,9 +1,3 @@
-# Getting Started in R
+# Data Mining in R
 
-## What is R?
-
-## Why should I use R?
-
-## Installing R and RStudio
-
-## Navigating the RStudio Interface
+Coming soon! Using package *rvest*
