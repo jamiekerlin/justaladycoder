@@ -7,3 +7,5 @@
 ## Installing R and RStudio
 
 ## Navigating the RStudio Interface
+
+## Scripts, Markdown, Shiny
