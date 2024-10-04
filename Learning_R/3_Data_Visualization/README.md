@@ -1,9 +1,19 @@
-# Getting Started in R
+# Data Visualization in R
 
-## What is R?
+## Introduction to ggplot
 
-## Why should I use R?
+## Basic building blocks
 
-## Installing R and RStudio
+## Common types of plots
 
-## Navigating the RStudio Interface
+## How to make common aesthetic changes
+Color, fill, axis labels, titles, themes, shapes, sizes
+
+## How to make advanced aesthetic changes
+
+## Even more plots!
+
+## ggsave
+
+
+
