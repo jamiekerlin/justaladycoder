@@ -1,9 +1,4 @@
-# Getting Started in R
+# Full Project Examples
+Find examples of projects from start to finish here!
 
-## What is R?
-
-## Why should I use R?
-
-## Installing R and RStudio
-
-## Navigating the RStudio Interface
+Coming soon!
