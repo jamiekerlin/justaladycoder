@@ -1,9 +1,11 @@
-# Getting Started in R
+# Statistics
 
-## What is R?
+# Descriptive Analysis in R
+## What is descriptive analysis?
+## Basic descriptives
+## Handling missing values
+## Handling outliers
+## Life cycle of descriptive analysis
+Clean, visualize, describe, clean, visualize, describe...
 
-## Why should I use R?
 
-## Installing R and RStudio
-
-## Navigating the RStudio Interface
