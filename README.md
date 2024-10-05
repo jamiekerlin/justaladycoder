@@ -1,7 +1,6 @@
-# Just A Lady CodeR
-
+![](https://i.imgur.com/pQnaXWb.png)
 ## A platform ran by women to offer resources to learn how to code in R and other programming languages
-## Stay tuned for more free resources to come!
+Stay tuned for more free resources to come!
 Instagram and TikTok: @justaladycodeR
 
 ## Learning R 
