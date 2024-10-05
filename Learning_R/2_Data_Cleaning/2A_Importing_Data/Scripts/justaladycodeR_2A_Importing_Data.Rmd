@@ -1,0 +1,146 @@
+---
+title: "Importing Data"
+author: "Just A Lady CodeR"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    theme: flatly
+    toc: yes
+    toc_float:
+      collapsed: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+![](https://i.imgur.com/pQnaXWb.png)
+
+# Introduction
+
+First, let's learn how to bring our data into R. Of course, this assumes we have data!
+If you don't have data to use, you can always download free sample data from Kaggle or similar websites.
+Today, we will use the [palmerpenguins dataset](https://allisonhorst.github.io/palmerpenguins/).
+
+![](https://allisonhorst.github.io/palmerpenguins/logo.png)   
+
+
+## Load packages
+
+First, we will install any load any necessary packages. If you need a refresher for how to do this, please visit the section on [Installing and Loading Packages in R](https://rpubs.com/jamiekerlin/just-a-lady-coder-install-load-packages).
+
+
+You'll see that I always load *tidyverse*, *here*, and *janitor*. These are my favorite packages and always load them. See more about each of these packages in the [Package Highlights](https://github.com/jamiekerlin/justaladycoder/tree/main/Learning_R/Package_Highlights) section.
+
+Load libraries:
+
+```{r}
+
+library(tidyverse)
+library(here)
+library(janitor)
+library(readxl)
+library(writexl)
+library(palmerpenguins)
+
+```
+
+
+## Palmer penguins
+The palmer penguins dataset comes automatically loaded when we load the package. However, I want to show you all how to import data! To do that, I'll first write the data to my local files and then import it back here.
+
+First, let's take a look at the data. We can call "penguins" to reference the data.
+
+```{r}
+
+print(penguins)
+
+```
+
+Let's save the dataset as an object in our environment. We can see there are 344 rows and 8 columns.
+
+```{r}
+
+data <- penguins
+
+```
+
+## Exporting data
+
+Let's export the data first as a CSV and then as an Excel file so we can see how to export and import data
+
+As a CSV using the write_csv() function and the *here* package. I am telling the computer to take the object "data" and then (denoted by %>%) writing the csv to a specific pathway. The *here* package allows us to quickly reference pathways within a project folder instead of needing to set the working directory and full directory pathway each time we restart R. This is especially helpful when we share code through GitHub repositories. Please check the *here* package information in the [Package Highlights](https://github.com/jamiekerlin/justaladycoder/tree/main/Learning_R/Package_Highlights) section (Coming soon!).
+```{r}
+
+
+data %>% 
+  write_csv(here("Learning_R",
+                 "2_Data_Cleaning",
+                 "2A_Importing_Data",
+                 "Data",
+                 "penguins.csv")) # everything up to "Data" is the pathway and "penguins.csv" is the filename I am saving the data under
+
+```
+
+We can also write it as an Excel file using the write_xlsx() function from the *writexl* package.
+
+```{r}
+
+data %>% 
+  write_xlsx(here("Learning_R",
+                 "2_Data_Cleaning",
+                 "2A_Importing_Data",
+                 "Data",
+                 "penguins.xlsx")) # make sure to change the file type in the file name!
+
+```
+
+
+## Importing data
+
+We can read the data into R by using the opposite of "write"... "read"! 
+
+First, we can bring in the CSV file using read_csv(). We want to save it as an object with a unique name so that it is in our environment.
+
+```{r}
+
+# the arrow "<-" assigns this to a new object named "data_csv"
+data_csv <- read_csv(here("Learning_R",
+                 "2_Data_Cleaning",
+                 "2A_Importing_Data",
+                 "Data",
+                 "penguins.csv"))
+
+```
+
+
+And bring in the Excel file using read_xlsx()
+
+```{r}
+
+data_xlsx <- read_xlsx(here("Learning_R",
+                 "2_Data_Cleaning",
+                 "2A_Importing_Data",
+                 "Data",
+                 "penguins.xlsx"))
+
+```
+
+
+If the Excel file you are importing has more than one sheet, you can specify the sheets you want to read in using the argument "sheet"
+
+```{r}
+
+data_xlsx_sheet <-read_xlsx(here("Learning_R",
+                      "2_Data_Cleaning",
+                      "2A_Importing_Data",
+                      "Data",
+                      "penguins.xlsx"), sheet = "Sheet1")
+
+```
+
+Thank you and please continue on to the next section to learn more :)
+
+Any questions? Email us at justaladycoder@gmail.com
+
+![](https://i.imgur.com/pQnaXWb.png)

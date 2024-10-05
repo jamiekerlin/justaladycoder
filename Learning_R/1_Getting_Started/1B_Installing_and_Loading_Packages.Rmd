@@ -1,0 +1,90 @@
+---
+title: "Installing and Loading Packages"
+author: "Just A Lady CodeR"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    theme: flatly
+    toc: yes
+    toc_float:
+      collapsed: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+![](https://i.imgur.com/pQnaXWb.png)
+
+# Introduction
+R works by running functions that live within packages. To use these packages, we must install them and load them whenever we open or restart R. Here, I will show how to install/load packages and have you install 3 of my favorite packages. 
+
+## Installing Packages
+We need to install packages before we can use them. I will use the *tidyverse* package as an example (it's my favorite package). To install packages you will run this code (by removing the hashtag in front of the "install.packages" function).
+
+```{r}
+
+# install.packages("tidyverse") 
+# function is "install.packages"
+# argument is "tidyverse" AKA the name of the package in quotation marks
+
+```
+
+Packages only need to be installed once, so after installing code, you want to comment out the code by placing a hashtag in front of the code. This stops the line of code from running.
+
+You can also include a conditional install in your code so that you do not have to comment out your code.
+This code does the following:  
+  * Creates a list of the packages that will be used in the script  
+  * For each of the packages in the script, it searches for the name of the package in the list of the installed packages  
+  * If the package does not exist in the list, it installs it, otherwise it does nothing
+
+```{r}
+
+requiredPackages = c('tidyverse', 'here', 'janitor') #create a list of the packages to conditionall install
+
+for(p in requiredPackages){ # for each of the packages (we'll call this "p") in the list above (requiredPackages), do the following:
+  
+  if(!require(p,character.only = TRUE)) install.packages(p) # if the package is not in the list of installed packages, install the package, or else do not install the package
+}
+
+```
+
+
+## Loading libraries
+
+To load libraries, run the following code:
+
+```{r}
+
+library(tidyverse)
+
+# library() is the function
+# tidyverse is the argument AKA the name of the package. It does not need to be in quotations because it is already installed in the packages
+
+```
+
+We do not need to comment out the lines that load the libraries/packages because they need to be ran everytime R is restarted.
+
+We can now add on to our conditional install code from above, telling it to then load all packages.
+
+
+```{r}
+
+requiredPackages = c('tidyverse', 'here', 'janitor') #create a list of the packages to conditionall install
+
+for(p in requiredPackages){ # for each of the packages (we'll call this "p") in the list above (requiredPackages), do the following:
+  
+  if(!require(p,character.only = TRUE)) install.packages(p) # if the package is not in the list of installed packages, install the package, or else do not install the package
+
+  library(p,character.only = TRUE) # we add this line of code and it loads all the packages
+  
+}
+```
+
+Please run the conditional install code above in your own R to install my favorite packages that we will be using, *tidyverse*, *here*, and *janitor*.
+
+Thank you and please continue on to the next section to learn more :)
+
+Any questions? Email us at justaladycoder@gmail.com
+
+![](https://i.imgur.com/pQnaXWb.png)
