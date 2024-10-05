@@ -7,7 +7,7 @@ Instagram: @justaladycodeR
 ## Learning R 
 From the basics of syntax and data cleaning to complicated statistical models, learn how to use R for data analysis here!  
 #### R Roadmap
-  1. #### [Getting Started](https://github.com/jamiekerlin/justaladycoder/tree/main/Learning_R/1_Getting_Started)  *Coming soon*
+  1. #### [Getting Started](https://github.com/jamiekerlin/justaladycoder/tree/main/Learning_R/1_Getting_Started)  
   2. #### [Data Cleaning](https://github.com/jamiekerlin/justaladycoder/tree/main/Learning_R/2_Data_Cleaning)  *Coming soon*
   3. #### [Data Visualization](https://github.com/jamiekerlin/justaladycoder/tree/main/Learning_R/3_Data_Visualization)  *Coming soon*
   4. #### [Statistics](https://github.com/jamiekerlin/justaladycoder/tree/main/Learning_R/4_Statistics)  *Coming soon*
