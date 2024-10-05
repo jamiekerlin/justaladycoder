@@ -38,5 +38,5 @@ Some helpful resources to get you started:
  * [Posit Cheat Sheets](https://posit.co/resources/cheatsheets/)
  * [The Tidyverse](https://www.tidyverse.org/)
 
-## Next steps
-Now that you've set up your R, let's move on to the next section, [Data Cleaning in R](https://github.com/jamiekerlin/justaladycoder/tree/main/Learning_R/2_Data_Cleaning). Here, you'll learn how to import your data and get it ready to analyze. 
+## Installing packages
+Now that you've set up your R, let's move on to the next section, [Installing and Loading Packages in R](https://rpubs.com/jamiekerlin/just-a-lady-coder-install-load-packages). Here, you'll learn how to import your data and get it ready to analyze. 
