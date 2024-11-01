@@ -1,0 +1,81 @@
+---
+title: "Basics of ggplot"
+author: "Just A Lady CodeR"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    theme: flatly
+    toc: yes
+    toc_float:
+      collapsed: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+![](https://i.imgur.com/pQnaXWb.png)
+
+# Introduction
+*ggplot* is an awesome package for creating data visualizations. It's part of the *tidyverse* package, so you don't need to load the package separately. The "GG" in ggplot standing for "the grammar of graphics". To create visualizations using ggplot, you start with building blocks and add more and more layers until you reach your final plot. 
+
+We will start with the basic building blocks of ggplot, discuss different types of plots, and work our way up to the more specific layers of aesthetics you can add to your plots.
+
+# Load our libraries
+
+We'll be working with the palmerpenguins dataset today, so we don't need to load any other packages other than *tidyverse* and *palmerpenguins*
+
+```{r}
+
+library(tidyverse)
+library(palmerpenguins)
+
+```
+
+# Dataset
+
+Let's take a look at the data we're working with today
+
+```{r}
+
+print(penguins)
+
+```
+
+I'm going to save the penguins data as an object to my environment so that our code looks similar to if we had a dataset we loaded into R as an object.
+
+```{r}
+data <- penguins
+```
+
+# Basic Building Blocks of ggplot
+
+## Create the plot and axes
+The basic building block function for ggplot is... ggplot(). We'll start with this to tell ggplot what we want for:  
+  * Where our plot data is coming from: in this case, our data is called "data"
+  * What variables we are using for our axes, aesthetics, etc.: for this example, we will create a plot for body_mass_g (x axis) by flipper_length_mm (y axis). 
+  
+```{r}
+
+ggplot(data, mapping = aes(x = body_mass_g, y = flipper_length_mm))
+
+```
+
+As you can see, this code creates the basic building blocks of our plot. It makes:  
+  * A general shape of a plot we need with the appropriate ranges for the x and y axes based on our data  
+  * Axis titles and tick labels for our x and y axes
+
+## Create the plot type
+
+Now, we can take the same code we have above and begin adding on new layers. We usually use the %>% to connect lines of code, but ggplot uses the + symbol to connect lines of code. 
+
+Let's create a scatterplot by adding a new line of code that uses the geom_point() function.
+
+```{r}
+
+ggplot(data, mapping = aes(x = body_mass_g, y = flipper_length_mm)) +
+  geom_point()
+
+```
+
+*to be continued*
